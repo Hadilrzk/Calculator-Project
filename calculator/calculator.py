@@ -36,7 +36,7 @@ elif op == 'squareroot':
     except Exception as e:
         print('An unexpected error occurred:', e)    
 elif op in trigonometric_ops:
-    # with  math library
+    
     ang = float(input('Enter the angle in degrees:'))        
     rad = math.radians(ang)
     if op == 'sin':
@@ -47,18 +47,5 @@ elif op in trigonometric_ops:
         result = math.tan(rad)
     print('the result is :', result)   
 
-    #without  math library (taylor series)
-    # deg=float(input('enter angle in degrees:'))
-    #p = 3.14
-    # rad=deg * (p/180)
-    # sin = rad -(rad**3)/6 + (rad**5)/120 -(rad**7)/5040
-    #cos= 1 - (rad**2)/2 +(rad**4)/24 -(rad**6)/720
-    #if op == 'sin':
-        #print('the result is:',sin)
-    #elif op == 'cos':
-       # print('the result is :',cos)
-    #elif op == 'tan':
-        #if cos == 0:
-            #print('undefined')
-        #else : print('the result is :', sin/cos)        
+       
 else : print('operation', op, 'is not supported ')            
